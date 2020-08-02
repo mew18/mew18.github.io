@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>CSS Website</title>
+    </head>
+
+    <body>
+        <nav>
+            <ul class="topnav" id="hambg">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contant">Contact Us</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li class="topnav-right"><a href="#signup">Sign Up</a></li>
+                <li class="topnav-right"><a href="#signin ">Sign in</a></li>
+                <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
+            </ul>
+        </nav>
+
+        <div class="container" id="section-1-gradient">
+            <div class="row">
+                <div class="col-6">
+                    <div class="left-col6">
+                        <h1 class="large">Evil Raccoon</h1>
+                        <h1 class="large">Made for Developers</h1>
+                    </div>
+                    <form>
+                        <div class="left-col6">
+                            <h2>Username</h2>
+                            <input class="inputbox" type="text" placeholder="Username" name="usernmae">
+                            <h2>Password</h2>
+                            <input class="inputbox" type="password" placeholder="password" name="password">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <div class="right-col6">
+                        <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fNkPOLpQjlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <header>
+            <h1 class="section2Header">The art of Trolling</h1>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="icon.png" alt="troll Face">
+                        </div>
+                        <label for="troll Face">Problem?</label>
+                        <p>“On the internet you're a troll until proven innocent.”</p>
+                        <b>
+                            <p> -Narcissismus Decimus Maximus</p>
+                        </b>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="icon.png" alt="troll Face 1">
+                        </div>
+                        <label for="troll Face 1">You mad?</label>
+                        <p>“On the internet you're a troll until proven innocent.”</p>
+                        <b>
+                            <p> -J. K. Rowling</p>
+                        </b>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="icon.png" alt="troll Face 2">
+                        </div>
+                        <label for="troll Face 2">Whooosh!</label>
+                        <p>“Nigga you sad now”</p>
+                        <b>
+                            <p> - Crying cat meme</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn ">
+                        Learn how to troll
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <article>
+                        <p>“You've gotta dance like there's nobody watching,</p>
+                        <p>Love like you'll never be hurt,</p>
+                        <p>Sing like there's nobody listening,</p>
+                        <p>And live like it's heaven on earth.”</p>
+                    </article>
+                </div>
+                <div class="col-5">
+                    <div class="icon2">
+                        <img src="icon2.png" alt="second icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="foot">
+            <a href="http://www.prankspace.com/">
+            <div class="row">
+                <div class="col-3">
+                    <h1>Look</h1>
+                    <ul>
+                        <li>why</li>
+                        <li>did</li>
+                        <li>the</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h1>MoM</h1>
+                    <ul>
+                        <li>chicken</li>
+                        <li>cross</li>
+                        <li>the </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h1>a</h1>
+                    <ul>
+                        <li>road ?</li>
+                        <li>because</li>
+                        <li>he</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h1>Website</h1>
+                    <ul>
+                        <li>wanted</li>
+                        <li>to</li>
+                        <li>die !! </li>
+                    </ul>
+                </div>
+            </div>
+            </a>
+        </footer>
+
+        <script>
+            function dropdownMenu() {
+                var ham = document.getElementById("hambg");
+                if (ham.className === "topnav") {
+                    ham.className += " responsive";
+                }
+
+                else {
+                    ham.className = "topnav";
+                }
+            }
+
+        </script>
+
+    </body>
+
+
+</html>
