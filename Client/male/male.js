@@ -1,6 +1,7 @@
+function display(url) {
 var req = new XMLHttpRequest();
 document.write("1");
-req.open("GET", "../../Classified_Images/male", true);
+req.open("GET", url, true);
 document.write("1.5");
 req.responseType = 'document';
 
@@ -24,4 +25,6 @@ req.onload = () => {
     }
 }
 req.send()
+}
 
+display("../../Classified_Images/male")
