@@ -4,6 +4,7 @@ function display(url) {
     req.responseType = 'document';
 
     req.onload = () => {
+        if (req.status === 200) {
             var elements = req.response.getElementsByTagName("a");
             for (x of elements) {
                 if (x.href.match(/\.(jpg)$/)) {
@@ -17,7 +18,12 @@ function display(url) {
                     // document.body.button.appendChild(img);
                 }
             };
+        }
+        else {
+            alert('Request failed lol fuck.' + req.status);
+        }
     }
     req.send()
 }
-display("../../Classified_Images/male")
+
+display("../../Classified_Images/female")
