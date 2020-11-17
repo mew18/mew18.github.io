@@ -1,30 +1,28 @@
 function display(url) {
-var req = new XMLHttpRequest();
-document.write("1");
-req.open("GET", url, true);
-document.write("1.5");
-req.responseType = 'document';
+    var req = new XMLHttpRequest();
+    req.open("GET", url, true);
+    req.responseType = 'document';
 
-req.onload = () => {
-    document.write("2");
-    if (req.status === 200) {
-        document.write("3");
-        var elements = req.response.getElementsByTagName("a");
-        for (x of elements) {
-            if (x.href.match(/\.(jpg)$/)) {
-                document.write("4");
-                let img = document.createElement("img");
-                img.src = x.href;
-                document.body.appendChild(img);
-            }
-        };
-    }
-    else {
-        document.write("5");
-        alert('Request failed lol fuck.' + req.status);
-    }
-}
-req.send()
-}
+    req.onload = () => {
+        if (req.status === 200) {
+            var elements = req.response.getElementsByTagName("a");
+            for (x of elements) {
+                if (x.href.match(/\.(jpg)$/)) {
+                    let img = document.createElement("img");
+                    img.src = x.href;
 
+                    let div = document.createElement('div');
+                    div.className = "female";
+                    div.innerHTML = img.src
+                    document.body.append(img);
+                    // document.body.button.appendChild(img);
+                }
+            };
+        }
+        else {
+            alert('Request failed lol fuck.' + req.status);
+        }
+    }
+    req.send()
+}
 display("../../Classified_Images/male")
