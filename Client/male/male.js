@@ -21,7 +21,7 @@ req.onload = () => {
     }
     else {
         document.write("5");
-        alert('Request failed.' + req.status);
+        alert('Request failed lol fuck.' + req.status);
     }
 }
 req.send()
