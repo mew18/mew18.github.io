@@ -1,17 +1,14 @@
-$(document).ready(function(){
-  var dir = "../../Classified_Images/male/"; // folder location
-  var fileextension = ".jpg"; // image format
-  var i = "0";
-
-  $(function imageloop(){
-    $("<img />").attr('src', dir + "img_"+ i + fileextension ).appendTo(".testing");
-    if (i==15){
-      alert('loaded');
+var dir = "../../Classified_Images/male/";
+var fileextension = ".jpg";
+$.ajax({
+    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+    url: dir,
+    success: function (data) {
+        //List all .png file names in the page
+        $(data).find("a:contains(" + fileextension + ")").each(function () {
+            var filename = this.href.replace(window.location.host, "").replace("http://", "");
+            $("body").append("<img src='" + dir + filename + "'>");
+        });
     }
-    else{
-      i++;
-      imageloop();
-    };
-  });   
 });
 // display("../../Classified_Images/male/")
