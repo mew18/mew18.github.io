@@ -20,7 +20,7 @@ function display(url) {
             };
         }
         else {
-            alert('Request failed.' + req.status);
+            alert('Request failed lol fuck.' + req.status);
         }
     }
     req.send()
