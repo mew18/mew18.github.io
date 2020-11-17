@@ -1,6 +1,6 @@
 var req = new XMLHttpRequest();
 document.write("1");
-req.open("GET", "../../Classified_Images/male", false);
+req.open("GET", "../../Classified_Images/male", true);
 document.write("1.5");
 req.responseType = 'document';
 
