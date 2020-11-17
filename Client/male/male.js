@@ -2,7 +2,9 @@ function display(url) {
     var req = new XMLHttpRequest();
     req.open("GET", url, true);
     req.responseType = 'document';
-
+    
+    document.write("before if")
+    
     req.onload = () => {
         if (req.status == 200) {
             var elements = req.response.getElementsByTagName("a");
