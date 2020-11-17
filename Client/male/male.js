@@ -1,10 +1,10 @@
 function display(url) {
     var req = new XMLHttpRequest();
-    req.open("POST", url, true);
+    req.open("GET", url, true);
     req.responseType = 'document';
 
     req.onload = () => {
-        if (req.status === 200) {
+        if (req.status == 200) {
             var elements = req.response.getElementsByTagName("a");
             for (x of elements) {
                 if (x.href.match(/\.(jpg)$/)) {
@@ -26,4 +26,4 @@ function display(url) {
     req.send()
 }
 
-display("../../Classified_Images/female")
+display("../../Classified_Images/female/")
