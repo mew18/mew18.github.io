@@ -1,6 +1,6 @@
 function display(url) {
     var req = new XMLHttpRequest();
-    req.open("GET", url, true);
+    req.open("POST", url, true);
     req.responseType = 'document';
 
     req.onload = () => {
